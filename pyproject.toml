@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bci-language-copilot"
+version = "0.1.0"
+description = "Predictive communication for EEG-based assistive BCI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "BCI-Language Copilot Contributors" }]
+dependencies = [
+  "numpy>=1.24",
+  "pydantic>=2.0",
+  "typer>=0.12",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+eeg = [
+  "mne>=1.7",
+  "scikit-learn>=1.4",
+  "scipy>=1.11",
+]
+live = [
+  "brainflow>=5.12",
+  "pylsl>=1.16",
+]
+
+[project.scripts]
+bci-language-copilot = "bci_language_copilot.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bci_language_copilot*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
