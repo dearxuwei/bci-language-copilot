@@ -23,8 +23,8 @@ Traditional BCI spellers often require many selections to express one sentence. 
 Use the project Python interpreter configured for this workspace:
 
 ```powershell
-D:\AI_Env\dl_5060ti\Scripts\python.exe -m pip install -e .[dev]
-D:\AI_Env\dl_5060ti\Scripts\python.exe -m bci_language_copilot.cli demo
+D:\AI_Env\dl_5060ti\python.exe -m pip install -e .[dev]
+D:\AI_Env\dl_5060ti\python.exe -m bci_language_copilot.cli demo
 ```
 
 If that interpreter is not available yet, create or repair the environment first, then rerun the commands.

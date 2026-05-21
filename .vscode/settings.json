@@ -1,5 +1,5 @@
 {
-  "python.defaultInterpreterPath": "D:\\AI_Env\\dl_5060ti\\Scripts\\python.exe",
+  "python.defaultInterpreterPath": "D:\\AI_Env\\dl_5060ti\\python.exe",
   "python.terminal.activateEnvironment": true,
   "terminal.integrated.env.windows": {
     "PYTHONPATH": "${workspaceFolder}"

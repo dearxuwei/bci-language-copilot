@@ -30,7 +30,7 @@ BCI signal or simulated probabilities
 Target local interpreter:
 
 ```text
-D:\AI_Env\dl_5060ti\Scripts\python.exe
+D:\AI_Env\dl_5060ti\python.exe
 ```
 
 The repository avoids committing virtual environments. Recreate dependencies from `pyproject.toml`.
