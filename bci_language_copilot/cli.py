@@ -12,6 +12,11 @@ app = typer.Typer(help="BCI-Language Copilot research prototype.")
 console = Console()
 
 
+@app.callback()
+def main() -> None:
+    """Command group for BCI-Language Copilot."""
+
+
 @app.command()
 def demo(context: str = "clinical", top_k: int = 3) -> None:
     """Run a mock BCI predictive communication demo."""
