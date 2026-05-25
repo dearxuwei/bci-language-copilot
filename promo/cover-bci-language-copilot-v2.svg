@@ -1,0 +1,123 @@
+<svg width="2400" height="1350" viewBox="0 0 2400 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="159" y1="52" x2="2109" y2="1298" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020816"/>
+      <stop offset="0.46" stop-color="#081C35"/>
+      <stop offset="1" stop-color="#010208"/>
+    </linearGradient>
+    <radialGradient id="cyanNebula" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1370 543) rotate(107) scale(742 492)">
+      <stop stop-color="#48E4FF" stop-opacity=".50"/>
+      <stop offset=".45" stop-color="#5B7CFF" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#5B7CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberNebula" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1880 828) rotate(24) scale(470 300)">
+      <stop stop-color="#FFB36B" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#FFB36B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="signal" x1="530" y1="590" x2="1914" y2="726" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EF2FF"/>
+      <stop offset=".48" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#FFB36B"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".035"/>
+    </linearGradient>
+    <filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fineGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="headClip">
+      <path d="M453 322c-87 48-146 142-146 249 0 151 115 276 262 292 24 3 39 26 33 49l-32 129c-6 25 13 49 39 49h218c23 0 42-19 42-42V884c0-20 14-37 34-41 139-28 244-151 244-299 0-169-137-306-306-306H600c-52 0-103 13-147 84Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="2400" height="1350" fill="url(#bg)"/>
+  <circle cx="1320" cy="548" r="650" fill="url(#cyanNebula)" filter="url(#blur40)"/>
+  <circle cx="1900" cy="824" r="430" fill="url(#amberNebula)" filter="url(#blur40)"/>
+
+  <g opacity=".22">
+    <path d="M122 1080C575 940 854 986 1128 1030c352 57 624 61 1148-194" stroke="#BEEBFF" stroke-opacity=".08" stroke-width="2"/>
+    <path d="M80 962C514 808 801 840 1112 892c377 63 654 57 1188-245" stroke="#BEEBFF" stroke-opacity=".08" stroke-width="2"/>
+    <path d="M0 1134H2400M0 1016H2400M0 898H2400M0 780H2400M0 662H2400" stroke="#86E9FF" stroke-opacity=".045"/>
+    <path d="M356 128V1222M714 128V1222M1072 128V1222M1430 128V1222M1788 128V1222" stroke="#86E9FF" stroke-opacity=".035"/>
+  </g>
+
+  <g transform="translate(290 210)">
+    <g clip-path="url(#headClip)">
+      <rect x="0" y="0" width="900" height="950" fill="#061225" fill-opacity=".62"/>
+      <path d="M94 610c109-90 218-119 327-87 97 28 161 91 245 82 58-6 112-46 164-120" stroke="#7FE8FF" stroke-opacity=".16" stroke-width="2"/>
+      <path d="M130 690c128-79 237-87 328-23 82 57 160 69 235 34 54-25 100-71 138-138" stroke="#B28BFF" stroke-opacity=".13" stroke-width="2"/>
+      <path d="M166 764c106-43 193-39 262 11 83 60 173 64 270 11" stroke="#FFB36B" stroke-opacity=".12" stroke-width="2"/>
+      <circle cx="254" cy="398" r="10" fill="#7FE8FF"/>
+      <circle cx="362" cy="344" r="12" fill="#7FE8FF"/>
+      <circle cx="492" cy="328" r="10" fill="#A78BFA"/>
+      <circle cx="620" cy="372" r="11" fill="#A78BFA"/>
+      <circle cx="716" cy="475" r="10" fill="#FFB36B"/>
+      <circle cx="646" cy="620" r="10" fill="#7FE8FF"/>
+      <circle cx="438" cy="676" r="11" fill="#FFB36B"/>
+      <path d="M254 398L362 344L492 328L620 372L716 475L646 620L438 676L254 398Z" stroke="url(#signal)" stroke-width="3" stroke-opacity=".72"/>
+      <path d="M362 344L646 620M492 328L438 676M620 372L438 676" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".10"/>
+    </g>
+    <path d="M453 322c-87 48-146 142-146 249 0 151 115 276 262 292 24 3 39 26 33 49l-32 129c-6 25 13 49 39 49h218c23 0 42-19 42-42V884c0-20 14-37 34-41 139-28 244-151 244-299 0-169-137-306-306-306H600c-52 0-103 13-147 84Z" stroke="#D8F7FF" stroke-opacity=".28" stroke-width="3"/>
+    <g filter="url(#fineGlow)">
+      <circle cx="254" cy="398" r="17" stroke="#7FE8FF" stroke-opacity=".45"/>
+      <circle cx="362" cy="344" r="19" stroke="#7FE8FF" stroke-opacity=".45"/>
+      <circle cx="492" cy="328" r="18" stroke="#A78BFA" stroke-opacity=".45"/>
+      <circle cx="620" cy="372" r="18" stroke="#A78BFA" stroke-opacity=".45"/>
+      <circle cx="716" cy="475" r="17" stroke="#FFB36B" stroke-opacity=".42"/>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M830 656c133-62 243-72 330-31 96 45 138 139 231 143 84 4 147-67 215-142 72-81 154-166 284-156" stroke="url(#signal)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M830 656c133-62 243-72 330-31 96 45 138 139 231 143 84 4 147-67 215-142 72-81 154-166 284-156" stroke="#D8F7FF" stroke-opacity=".09" stroke-width="34" stroke-linecap="round"/>
+    <circle cx="1024" cy="614" r="12" fill="#7FE8FF"/>
+    <circle cx="1286" cy="706" r="14" fill="#A78BFA"/>
+    <circle cx="1538" cy="676" r="13" fill="#FFB36B"/>
+    <circle cx="1816" cy="474" r="12" fill="#7FE8FF"/>
+  </g>
+
+  <g transform="translate(1320 354)">
+    <rect x="0" y="0" width="476" height="340" rx="34" fill="url(#glass)" stroke="#CFF8FF" stroke-opacity=".18"/>
+    <g opacity=".86">
+      <rect x="64" y="64" width="56" height="56" rx="10" fill="#7FE8FF" fill-opacity=".14" stroke="#7FE8FF" stroke-opacity=".35"/>
+      <rect x="140" y="64" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="216" y="64" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="292" y="64" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="64" y="140" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="140" y="140" width="56" height="56" rx="10" fill="#A78BFA" fill-opacity=".16" stroke="#A78BFA" stroke-opacity=".38"/>
+      <rect x="216" y="140" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="292" y="140" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="64" y="216" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="140" y="216" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <rect x="216" y="216" width="56" height="56" rx="10" fill="#FFB36B" fill-opacity=".16" stroke="#FFB36B" stroke-opacity=".38"/>
+      <rect x="292" y="216" width="56" height="56" rx="10" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".10"/>
+    </g>
+    <text x="376" y="96" fill="#DFFBFF" font-size="23" font-family="Inter, Segoe UI, Arial">P300</text>
+    <text x="376" y="154" fill="#AFC7E8" font-size="18" font-family="Inter, Segoe UI, Arial">intent grid</text>
+    <text x="376" y="228" fill="#AFC7E8" font-size="18" font-family="Inter, Segoe UI, Arial">adaptive stop</text>
+  </g>
+
+  <g transform="translate(1670 722)">
+    <path d="M0 48c0-27 22-48 48-48h410c27 0 48 21 48 48v176c0 27-21 48-48 48H199l-82 70 17-70H48c-26 0-48-21-48-48V48Z" fill="url(#glass)" stroke="#CFF8FF" stroke-opacity=".20"/>
+    <text x="42" y="76" fill="#F4FCFF" font-size="30" font-weight="650" font-family="Inter, Segoe UI, Arial">I need some water.</text>
+    <text x="42" y="124" fill="#B5CAE7" font-size="22" font-family="Inter, Segoe UI, Arial">phrase predicted from sparse intent</text>
+    <path d="M42 162h360" stroke="#7FE8FF" stroke-opacity=".25"/>
+    <text x="42" y="206" fill="#FFCD94" font-size="22" font-family="Inter, Segoe UI, Arial">72% fewer selections in mock demo</text>
+  </g>
+
+  <g transform="translate(132 142)">
+    <text x="0" y="0" fill="#8FDFFF" font-size="21" letter-spacing="5" font-family="Inter, Segoe UI, Arial">BCI · LANGUAGE · ASSISTIVE AI</text>
+    <text x="0" y="114" fill="#F6FBFF" font-size="92" font-weight="760" font-family="Inter, Segoe UI, Arial">BCI-Language</text>
+    <text x="0" y="214" fill="#F6FBFF" font-size="92" font-weight="760" font-family="Inter, Segoe UI, Arial">Copilot</text>
+    <text x="0" y="286" fill="#A9C6E8" font-size="30" font-family="Inter, Segoe UI, Arial">Neural intent decoding meets predictive communication</text>
+  </g>
+
+  <text x="132" y="1232" fill="#7FA3D1" font-size="22" font-family="Inter, Segoe UI, Arial">P300 selector · local language model · adaptive phrase completion · research prototype</text>
+</svg>
