@@ -7,7 +7,7 @@ name = "bci-language-copilot"
 version = "0.1.0"
 description = "Predictive communication for EEG-based assistive BCI."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "BCI-Language Copilot Contributors" }]
 dependencies = [

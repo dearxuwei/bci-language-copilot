@@ -7,6 +7,7 @@ __pycache__/
 dist/
 build/
 .env
+.vscode/settings.json
 data/raw/
 data/private/
 outputs/

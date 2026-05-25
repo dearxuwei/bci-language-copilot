@@ -20,14 +20,23 @@ Traditional BCI spellers often require many selections to express one sentence. 
 
 ## Quick Start
 
-Use the project Python interpreter configured for this workspace:
+Mac development uses the system `python3` directly and does not create a `.venv`:
+
+```bash
+python3 -m pip install -e ".[dev]"
+python3 -m pytest -q
+python3 -m bci_language_copilot.cli demo
+```
+
+Windows development should continue to use the existing project interpreter:
 
 ```powershell
-D:\AI_Env\dl_5060ti\python.exe -m pip install -e .[dev]
+D:\AI_Env\dl_5060ti\python.exe -m pip install -e ".[dev]"
+D:\AI_Env\dl_5060ti\python.exe -m pytest -q
 D:\AI_Env\dl_5060ti\python.exe -m bci_language_copilot.cli demo
 ```
 
-If that interpreter is not available yet, create or repair the environment first, then rerun the commands.
+See [docs/SETUP_MAC.md](docs/SETUP_MAC.md) and [docs/SETUP_WINDOWS.md](docs/SETUP_WINDOWS.md) for the full cross-platform workflow.
 
 ## Project Layout
 
@@ -49,7 +58,7 @@ tests/
 
 The initial CLI demo simulates BCI candidate probabilities and generates phrase completions from a constrained assistive communication phrase bank.
 
-```powershell
+```bash
 python -m bci_language_copilot.cli demo --context clinical
 ```
 

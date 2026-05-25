@@ -9,7 +9,9 @@ class MockBCIDecoder:
     def predict(self, partial: str = "") -> list[DecodedCandidate]:
         labels = [partial or "help", "pain", "rest"]
         probabilities = [0.72, 0.18, 0.10]
+        if len(labels) != len(probabilities):
+            raise ValueError("labels and probabilities must have the same length")
         return [
             DecodedCandidate(label=label, probability=probability)
-            for label, probability in zip(labels, probabilities, strict=True)
+            for label, probability in zip(labels, probabilities)
         ]
