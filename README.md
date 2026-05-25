@@ -1,6 +1,6 @@
 # BCI-Language Copilot
 
-![BCI-Language Copilot cover](promo/cover-bci-language-copilot-v4.svg)
+![BCI-Language Copilot method figure](promo/cover-bci-language-copilot-v5.svg)
 
 Predictive communication for EEG-based assistive BCI.
 
