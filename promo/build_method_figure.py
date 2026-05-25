@@ -120,18 +120,18 @@ def draw_pipeline(ax):
     ax.text(
         0.01,
         0.855,
-        "Figure 1 style schematic. The current repository implements the mock decoder, constrained phrase bank, and input-efficiency metric; hardware classifiers and LLM providers are extension points.",
+        "Research pain point: non-invasive BCI is bandwidth-limited; language prediction can turn a few noisy selections into phrase-level communication while keeping safety boundaries explicit.",
         fontsize=8.5,
         color=COLORS["muted"],
         ha="left",
         va="top",
     )
     stages = [
-        ("1 EEG epoch", "P300 / SSVEP\ncandidate evidence", COLORS["cyan"]),
-        ("2 Decoder", "posterior over\nintent tokens", COLORS["blue"]),
-        ("3 Stop rule", "confidence threshold\nand trial budget", COLORS["violet"]),
-        ("4 Language layer", "context phrase bank\nor local LLM", COLORS["amber"]),
-        ("5 Output", "ranked phrases\n+ efficiency report", COLORS["green"]),
+        ("1 EEG epoch", "P300 ERP / SSVEP\nlow-SNR neural evidence", COLORS["cyan"]),
+        ("2 Decoder", "posterior p(intent|EEG)\nranked candidates", COLORS["blue"]),
+        ("3 Stop rule", "confidence threshold\n+ top-2 margin", COLORS["violet"]),
+        ("4 Language layer", "phrase prior / local LLM\ncontext-aware ranking", COLORS["amber"]),
+        ("5 Output", "completed phrase\n+ efficiency audit", COLORS["green"]),
     ]
     xs = np.linspace(0.02, 0.79, len(stages))
     for idx, (title, body, color) in enumerate(stages):
@@ -152,7 +152,7 @@ def draw_pipeline(ax):
     ax.text(
         0.02,
         0.13,
-        "Design references: P300 speller literature, ChatBCI / ChatBCI-Assist, dynamic language-model BCI typing, and Nature/IEEE graphical-abstract conventions.",
+        "Literature anchors: Farwell & Donchin P300 speller; BCI speller reviews; Speier predictive spelling; ChatBCI; ChatBCI-Assist; LLM+BCI predictive communication review.",
         fontsize=7.5,
         color=COLORS["muted"],
         ha="left",
@@ -252,31 +252,32 @@ def draw_efficiency(ax):
 
 def draw_method_matrix(ax):
     panel_label(ax, "e")
-    ax.set_title("Implemented modules vs. planned extensions", loc="left", fontsize=10, fontweight="bold")
+    ax.set_title("Literature algorithms mapped to open-source modules", loc="left", fontsize=10, fontweight="bold")
     clean(ax)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     rows = [
-        ("implemented", "MockBCIDecoder", "PhraseBankPredictor", "InputEfficiency"),
-        ("extension", "P300 / SSVEP classifier", "local LLM provider", "online latency + top-k"),
-        ("guardrail", "offline prototype", "constrained phrases", "not emergency use"),
+        ("P300 spellers", "ERP evidence", "BCIDecoder", "posterior candidates"),
+        ("predictive spelling", "language prior", "LanguagePredictor", "ranked phrases"),
+        ("ChatBCI-Assist", "adaptive stop", "StoppingPolicy", "confidence + margin"),
+        ("this repo", "pipeline", "CommunicationPipeline", "efficiency audit"),
     ]
-    cols = ["status", "decoder", "language", "evaluation"]
-    x0 = [0.03, 0.24, 0.50, 0.75]
-    widths = [0.18, 0.23, 0.22, 0.21]
+    cols = ["source motif", "algorithm idea", "module", "observable output"]
+    x0 = [0.03, 0.26, 0.51, 0.75]
+    widths = [0.20, 0.21, 0.20, 0.21]
     for x, w, col in zip(x0, widths, cols):
         ax.text(x, 0.86, col, fontsize=7.5, fontweight="bold", color=COLORS["ink"], ha="left")
         ax.plot([x, x + w], [0.82, 0.82], color=COLORS["line"], lw=1)
     for r, row in enumerate(rows):
-        y = 0.68 - r * 0.22
-        color = [COLORS["green"], COLORS["blue"], COLORS["amber"]][r]
+        y = 0.70 - r * 0.17
+        color = [COLORS["cyan"], COLORS["amber"], COLORS["violet"], COLORS["green"]][r]
         for x, w, text in zip(x0, widths, row):
-            ax.add_patch(FancyBboxPatch((x, y), w, 0.14, boxstyle="round,pad=0.007,rounding_size=0.012", fc="#FFFFFF", ec=COLORS["line"], lw=0.7))
+            ax.add_patch(FancyBboxPatch((x, y), w, 0.105, boxstyle="round,pad=0.007,rounding_size=0.012", fc="#FFFFFF", ec=COLORS["line"], lw=0.7))
             ax.text(x + 0.01, y + 0.07, text, fontsize=7.0, color=color if x == x0[0] else COLORS["muted"], va="center", ha="left")
 
 
 def main():
-    out = Path(__file__).with_name("cover-bci-language-copilot-v5.svg")
+    out = Path(__file__).with_name("cover-bci-language-copilot-v6.svg")
     fig = plt.figure(figsize=(16, 9), facecolor="white", constrained_layout=False)
     gs = fig.add_gridspec(
         nrows=3,

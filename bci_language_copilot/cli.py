@@ -6,7 +6,7 @@ from rich.table import Table
 
 from bci_language_copilot.decoder.mock import MockBCIDecoder
 from bci_language_copilot.language.phrase_bank import PhraseBankPredictor
-from bci_language_copilot.metrics.input_efficiency import compute_efficiency
+from bci_language_copilot.pipeline import CommunicationPipeline
 
 app = typer.Typer(help="BCI-Language Copilot research prototype.")
 console = Console()
@@ -20,12 +20,8 @@ def main() -> None:
 @app.command()
 def demo(context: str = "clinical", top_k: int = 3) -> None:
     """Run a mock BCI predictive communication demo."""
-    decoder = MockBCIDecoder()
-    predictor = PhraseBankPredictor()
-
-    decoded = decoder.predict(partial="water")
-    suggestions = predictor.suggest(partial="water", context=context, top_k=top_k)
-    metrics = compute_efficiency(selected_text="water", completed_text=suggestions[0].text)
+    pipeline = CommunicationPipeline(decoder=MockBCIDecoder(), predictor=PhraseBankPredictor())
+    result = pipeline.run(partial="water", context=context, top_k=top_k)
 
     table = Table(title="BCI-Language Copilot Demo")
     table.add_column("Rank")
@@ -33,8 +29,8 @@ def demo(context: str = "clinical", top_k: int = 3) -> None:
     table.add_column("Probability")
     table.add_column("Language Suggestion")
 
-    for index, suggestion in enumerate(suggestions, start=1):
-        candidate = decoded[index - 1] if index - 1 < len(decoded) else decoded[-1]
+    for index, suggestion in enumerate(result.suggestions, start=1):
+        candidate = result.decoded[index - 1] if index - 1 < len(result.decoded) else result.decoded[-1]
         table.add_row(
             str(index),
             candidate.label,
@@ -44,8 +40,12 @@ def demo(context: str = "clinical", top_k: int = 3) -> None:
 
     console.print(table)
     console.print(
-        f"Keystroke saving rate: {metrics.keystroke_saving_rate:.2%} "
-        f"({metrics.characters_saved} chars saved)"
+        f"Stopping decision: {result.stopping.reason} "
+        f"(confidence={result.stopping.confidence:.2f})"
+    )
+    console.print(
+        f"Keystroke saving rate: {result.efficiency.keystroke_saving_rate:.2%} "
+        f"({result.efficiency.characters_saved} chars saved)"
     )
 
 
