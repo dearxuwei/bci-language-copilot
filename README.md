@@ -1,5 +1,7 @@
 # BCI-Language Copilot
 
+![BCI-Language Copilot cover](promo/cover-bci-language-copilot-v4.svg)
+
 Predictive communication for EEG-based assistive BCI.
 
 This project is an open-source research prototype for combining BCI intent decoding with language prediction. The first milestone focuses on a runnable mock/offline demo: simulated BCI probabilities select intents or partial text, then a language module completes communicative phrases and reports input-efficiency metrics.

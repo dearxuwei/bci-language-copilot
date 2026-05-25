@@ -1,0 +1,120 @@
+<svg width="2400" height="1350" viewBox="0 0 2400 1350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">BCI-Language Copilot editorial cover</title>
+  <desc id="desc">A dark editorial scientific cover showing EEG P300 signals flowing from a human profile into a language prediction manifold and completed phrase.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="2400" y2="1350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#040611"/>
+      <stop offset=".48" stop-color="#08152B"/>
+      <stop offset="1" stop-color="#02030A"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 580) rotate(22) scale(900 560)">
+      <stop stop-color="#74F3FF" stop-opacity=".42"/>
+      <stop offset=".42" stop-color="#7E6CFF" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#7E6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1880 680) rotate(30) scale(520 420)">
+      <stop stop-color="#FFC06E" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#FFC06E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="520" y1="690" x2="1970" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79F2FF"/>
+      <stop offset=".45" stop-color="#A491FF"/>
+      <stop offset="1" stop-color="#FFC06E"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".035"/>
+    </linearGradient>
+    <filter id="softBlur"><feGaussianBlur stdDeviation="48"/></filter>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="profileClip">
+      <path d="M585 238c-172 0-309 138-309 310 0 142 96 262 226 299 24 7 39 31 34 55l-33 157c-6 31 17 60 49 60h236c28 0 50-22 50-50V895c0-23 16-42 38-47 138-31 241-154 241-300 0-171-139-310-310-310H585Z"/>
+    </clipPath>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#bg)"/>
+  <circle cx="1120" cy="580" r="760" fill="url(#aura)" filter="url(#softBlur)"/>
+  <circle cx="1880" cy="680" r="520" fill="url(#warm)" filter="url(#softBlur)"/>
+  <g opacity=".36">
+    <path d="M0 1060H2400M0 920H2400M0 780H2400M0 640H2400M0 500H2400M0 360H2400" stroke="#B9F5FF" stroke-opacity=".045"/>
+    <path d="M320 140V1210M680 140V1210M1040 140V1210M1400 140V1210M1760 140V1210M2120 140V1210" stroke="#B9F5FF" stroke-opacity=".035"/>
+  </g>
+
+  <g transform="translate(110 80)">
+    <text x="0" y="40" fill="#8CEAFF" font-size="22" letter-spacing="6" font-family="Inter, Segoe UI, Arial">P300 BCI · PREDICTIVE LANGUAGE · ASSISTIVE RESEARCH</text>
+    <text x="0" y="142" fill="#F7FCFF" font-size="88" font-weight="760" font-family="Inter, Segoe UI, Arial">BCI-Language</text>
+    <text x="0" y="236" fill="#F7FCFF" font-size="88" font-weight="760" font-family="Inter, Segoe UI, Arial">Copilot</text>
+    <text x="4" y="294" fill="#A7BEDC" font-size="27" font-family="Inter, Segoe UI, Arial">Neural intent compressed into usable language</text>
+  </g>
+
+  <g transform="translate(190 248)">
+    <g clip-path="url(#profileClip)">
+      <rect x="0" y="0" width="980" height="920" fill="#061125" fill-opacity=".82"/>
+      <path d="M198 352c77-60 151-67 222-20 61 40 119 39 174-2 70-53 145-38 224 44" stroke="#79F2FF" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+      <path d="M176 512c78 64 150 70 216 18 65-52 134-43 206 27 80 78 171 74 274-13" stroke="#A491FF" stroke-opacity=".32" stroke-width="4" stroke-linecap="round"/>
+      <path d="M214 686c72-34 137-24 195 30 59 55 121 56 187 3 68-55 148-46 239 26" stroke="#FFC06E" stroke-opacity=".28" stroke-width="4" stroke-linecap="round"/>
+      <g filter="url(#glow)">
+        <circle cx="238" cy="365" r="13" fill="#79F2FF"/>
+        <circle cx="356" cy="313" r="15" fill="#79F2FF"/>
+        <circle cx="490" cy="332" r="13" fill="#A491FF"/>
+        <circle cx="610" cy="420" r="14" fill="#A491FF"/>
+        <circle cx="718" cy="548" r="15" fill="#FFC06E"/>
+        <circle cx="622" cy="675" r="13" fill="#79F2FF"/>
+        <circle cx="420" cy="708" r="14" fill="#FFC06E"/>
+      </g>
+      <path d="M238 365L356 313L490 332L610 420L718 548L622 675L420 708L238 365Z" stroke="url(#flow)" stroke-width="4"/>
+      <path d="M356 313L622 675M490 332L420 708M610 420L420 708" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="2"/>
+    </g>
+    <path d="M585 238c-172 0-309 138-309 310 0 142 96 262 226 299 24 7 39 31 34 55l-33 157c-6 31 17 60 49 60h236c28 0 50-22 50-50V895c0-23 16-42 38-47 138-31 241-154 241-300 0-171-139-310-310-310H585Z" stroke="#DDFBFF" stroke-opacity=".26" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M690 710c210-126 376-124 498 7 91 98 192 88 303-31 119-127 260-176 421-147" stroke="url(#flow)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M690 710c210-126 376-124 498 7 91 98 192 88 303-31 119-127 260-176 421-147" stroke="#DDFBFF" stroke-opacity=".075" stroke-width="42" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1038 326)">
+    <rect width="438" height="312" rx="34" fill="url(#glass)" stroke="#D6FBFF" stroke-opacity=".18"/>
+    <text x="38" y="62" fill="#EFFCFF" font-size="25" font-weight="700" font-family="Inter, Segoe UI, Arial">intent selector</text>
+    <text x="38" y="96" fill="#9FB7D4" font-size="17" font-family="Inter, Segoe UI, Arial">P300 target likelihoods</text>
+    <g transform="translate(42 132)">
+      <rect x="0" y="0" width="48" height="48" rx="9" fill="#79F2FF" fill-opacity=".20" stroke="#79F2FF" stroke-opacity=".50"/>
+      <rect x="62" y="0" width="48" height="48" rx="9" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".14"/>
+      <rect x="124" y="0" width="48" height="48" rx="9" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".14"/>
+      <rect x="186" y="0" width="48" height="48" rx="9" fill="#A491FF" fill-opacity=".18" stroke="#A491FF" stroke-opacity=".45"/>
+      <rect x="0" y="62" width="48" height="48" rx="9" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".14"/>
+      <rect x="62" y="62" width="48" height="48" rx="9" fill="#FFC06E" fill-opacity=".20" stroke="#FFC06E" stroke-opacity=".45"/>
+      <rect x="124" y="62" width="48" height="48" rx="9" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".14"/>
+      <rect x="186" y="62" width="48" height="48" rx="9" fill="#FFFFFF" fill-opacity=".055" stroke="#FFFFFF" stroke-opacity=".14"/>
+    </g>
+    <path d="M320 142c48 36 62 78 42 126" stroke="#79F2FF" stroke-opacity=".48" stroke-width="4" stroke-linecap="round"/>
+    <path d="M338 131a100 100 0 1 1-59 186" stroke="#FFC06E" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1504 222)">
+    <g opacity=".92" filter="url(#glow)">
+      <circle cx="220" cy="250" r="8" fill="#79F2FF"/><circle cx="318" cy="142" r="7" fill="#A491FF"/><circle cx="415" cy="232" r="9" fill="#FFC06E"/><circle cx="512" cy="160" r="7" fill="#79F2FF"/><circle cx="548" cy="328" r="9" fill="#A491FF"/><circle cx="390" cy="390" r="8" fill="#FFC06E"/><circle cx="284" cy="316" r="7" fill="#79F2FF"/>
+      <path d="M220 250L318 142L415 232L512 160M415 232L548 328L390 390L284 316L220 250M284 316L415 232" stroke="#DDFBFF" stroke-opacity=".28" stroke-width="2"/>
+      <ellipse cx="386" cy="260" rx="250" ry="170" stroke="#FFFFFF" stroke-opacity=".09" stroke-width="2"/>
+      <ellipse cx="386" cy="260" rx="330" ry="218" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="2"/>
+    </g>
+    <text x="166" y="522" fill="#AFC7E8" font-size="21" font-family="Inter, Segoe UI, Arial">language manifold</text>
+  </g>
+
+  <g transform="translate(1578 786)">
+    <path d="M0 48c0-27 22-48 48-48h494c27 0 48 21 48 48v178c0 27-21 48-48 48H230l-88 78 20-78H48c-26 0-48-21-48-48V48Z" fill="url(#glass)" stroke="#D6FBFF" stroke-opacity=".18"/>
+    <text x="42" y="82" fill="#F8FDFF" font-size="34" font-weight="720" font-family="Inter, Segoe UI, Arial">I need some water.</text>
+    <text x="42" y="128" fill="#AFC7E8" font-size="21" font-family="Inter, Segoe UI, Arial">phrase completion from sparse neural intent</text>
+    <path d="M42 164h434" stroke="#79F2FF" stroke-opacity=".18"/>
+    <text x="42" y="214" fill="#FFD49D" font-size="22" font-weight="650" font-family="Inter, Segoe UI, Arial">prior art: P300 speller + word prediction</text>
+  </g>
+
+  <g transform="translate(118 1080)">
+    <rect width="900" height="112" rx="28" fill="url(#glass)" stroke="#D6FBFF" stroke-opacity=".12"/>
+    <text x="34" y="44" fill="#DDFBFF" font-size="24" font-weight="700" font-family="Inter, Segoe UI, Arial">Visual basis</text>
+    <text x="34" y="82" fill="#9FB7D4" font-size="20" font-family="Inter, Segoe UI, Arial">ChatBCI · ChatBCI-Assist · P300 speller literature · Nature / IEEE cover systems</text>
+  </g>
+  <text x="118" y="1250" fill="#6F8EB8" font-size="18" font-family="Inter, Segoe UI, Arial">Research prototype only. This image is an original schematic inspired by cited literature and cover-style conventions; it does not reproduce journal cover art.</text>
+</svg>
